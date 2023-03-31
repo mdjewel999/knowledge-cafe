@@ -5,6 +5,10 @@ import athourImg from '../../assets/image/pexels-photo-614810.webp'
 const Blog = (props) => {
     const {author,title,coverimage,authorimage,readtime,publishdate}=props.blog;
     const bookmarkBlog = props.bookmarkBlog;
+
+
+
+    
     return (
         <Card className='card_blog mb-5'>
             <Card.Img variant="top" src={coverimage}/>

@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Bookmarked from './compoments/Bookmarked/Bookmarked';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Qustion from './compoments/Qustion/Qustion';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -42,7 +43,7 @@ function App() {
     <div className="App">
       <Header></Header>
       <div className='container'>
-        <div className='row'>
+        {/* <div className='row'>
           <div className="col-md-8">
 
             {blogs.map((b) => <Blog key={b.id} bookmarkBlog={bookmarkBlog} blog={b}></Blog>)}
@@ -53,7 +54,8 @@ function App() {
             <Bookmarked booksmark={booksmark}/>
           </div>
 
-        </div>
+        </div> */}
+      <Qustion></Qustion>
       </div>
       <ToastContainer />
     </div>
