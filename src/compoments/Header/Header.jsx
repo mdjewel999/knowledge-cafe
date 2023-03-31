@@ -5,7 +5,7 @@ import cardImage from '../../assets/image/pexels-photo-614810.webp'
 const Header = () => {
     return (
 
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navbar navbar-expand-lg bg-light mb-5">
             <div className="container-fluid">
                 <a className="navbar-brand" href="#">knowledge-cafe</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">

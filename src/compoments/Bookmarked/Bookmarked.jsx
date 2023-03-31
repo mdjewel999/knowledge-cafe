@@ -1,19 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Bookmarked.css'
-const Bookmarked = () => {
+const Bookmarked = ({booksmark}) => {
+const [min, setMin] = useState(0)
+
+useEffect(()=>{
+    booksmark.map(m => {
+        setMin(min + m.readtime)
+    });
+},[booksmark])
+
+console.log(min)
     return (
-        <div>
+        <div className='sidebar_list'>
             <div className='sidebar-title'>
-                <h1>Spent time on read : 177 min</h1>
+                <h5>Spent time on read : {min} min</h5>
             </div>
-            <div className='sidebar-list'>
-                <div>
-                    <h1>Bookmarked Blogs : 8</h1>
+            <div className='my-3'>
+                    <h5>Bookmarked Blogs : {booksmark.length}</h5>
                 </div>
+            {booksmark.map(b => <div key={b.id} className='sidebar-list'>
                 <div className='bookmark-description'>
-                    <h3>Master Microsoft Power Platform and Become an In-Demand!</h3>
+                    <h3>{b.title}</h3>
                 </div>
-            </div>
+            </div>)}
         </div>
     );
 };
