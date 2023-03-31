@@ -5,10 +5,7 @@ import athourImg from '../../assets/image/pexels-photo-614810.webp'
 const Blog = (props) => {
     const {author,title,coverimage,authorimage,readtime,publishdate}=props.blog;
     const bookmarkBlog = props.bookmarkBlog;
-
-
-
-    
+    const minCountBlog = props.minCountBlog;
     return (
         <Card className='card_blog mb-5'>
             <Card.Img variant="top" src={coverimage}/>
@@ -35,7 +32,7 @@ const Blog = (props) => {
                 <Card.Text>
                    <samp>#beginners </samp> <span> #programming</span>
                 </Card.Text>
-               <a href="/Mark as read">Mark as read</a>
+               <span role='button' onClick={()=>minCountBlog(props.blog)}>Mark as read</span>
             </Card.Body>
         </Card>
     );

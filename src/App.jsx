@@ -10,6 +10,7 @@ import Qustion from './compoments/Qustion/Qustion';
 function App() {
   const [count, setCount] = useState(0)
   const [booksmark, setBooksmark] = useState([])
+  const [minBlog, setMinBlog] = useState([])
   const [blogs, setBlogs] = useState([])
 
   useEffect(() => {
@@ -36,27 +37,56 @@ function App() {
         });
     }
   }
+  
+  const minCountBlog = (blog) => {
+    const findBup = minBlog.find(b => b.id === blog.id)
+    if(!findBup) {
+      setMinBlog([...minBlog, blog])
+    } else {
+      toast.error('Blog already added', {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+        });
+    }
+  }
 
 // console.log(booksmark)
 
-  return (
-    <div className="App">
-      <Header></Header>
-      <div className='container'>
-        {/* <div className='row'>
+const showAccordion = () => {
+  if (window.location.pathname === "/blog") {
+    return <Qustion />
+  } else {
+    return (
+<div className='container'>
+        <div className='row'>
           <div className="col-md-8">
 
-            {blogs.map((b) => <Blog key={b.id} bookmarkBlog={bookmarkBlog} blog={b}></Blog>)}
+            {blogs.map((b) => <Blog key={b.id} minCountBlog={minCountBlog} bookmarkBlog={bookmarkBlog} blog={b}></Blog>)}
               
           </div>
 
           <div className="col-md-4">
-            <Bookmarked booksmark={booksmark}/>
+            <Bookmarked minBlog={minBlog} booksmark={booksmark}/>
           </div>
 
-        </div> */}
-      <Qustion></Qustion>
+        </div>
       </div>
+    )
+  }
+}
+
+
+  return (
+    <div className="App">
+      <Header></Header>
+      {showAccordion()}
+      
       <ToastContainer />
     </div>
   )

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './Bookmarked.css'
-const Bookmarked = ({booksmark}) => {
+const Bookmarked = ({booksmark, minBlog}) => {
 const [min, setMin] = useState(0)
 
 useEffect(()=>{
-    booksmark.map(m => {
+    minBlog.map(m => {
         setMin(min + m.readtime)
     });
-},[booksmark])
+},[minBlog])
 
 console.log(min)
     return (

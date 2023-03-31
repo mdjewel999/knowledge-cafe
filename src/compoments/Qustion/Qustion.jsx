@@ -3,7 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 const Qustion = () => {
     return (
-        <div>
+        <div className='container'>
             <div>
             <Card>
                 <Card.Body>
