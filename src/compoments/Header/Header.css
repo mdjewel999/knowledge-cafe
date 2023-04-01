@@ -1,13 +1,13 @@
 .nav_bar {
   margin-right: 25px;
 }
-.nav_bar li a {
+.nav_bar {
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
   color: #111111;
 }
-.nav_bar li a:hover {
+.nav_bar:hover {
   color: #6047ec;
   background: rgba(17, 17, 17, 0.05);
   border-radius: 5px;
