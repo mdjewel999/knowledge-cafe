@@ -80,7 +80,9 @@ function App() {
               <Bookmarked minBlog={minBlog} booksmark={booksmark} />
             </div>
           </div>
+          <Qustion></Qustion>
         </div>
+        
       );
     }
   };

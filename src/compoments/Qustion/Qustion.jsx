@@ -6,9 +6,10 @@ const Qustion = () => {
     <div className="container">
       <div>
         <Card>
+          <h1 className="text-center text-primary-emphasis">Qustion And Answer </h1>
           <Card.Body>
-            <Card.Title>1.Difference between props and state ? </Card.Title>
-            <Card.Text>
+            <Card.Title className="p-2">1.Difference between props and state ? </Card.Title>
+            <Card.Text  className="p-2">
               In React, both props and state are used to manage data in a
               component, but they serve different purposes. Props short for
               properties are read-only data that are passed to a component from
@@ -32,8 +33,8 @@ const Qustion = () => {
       <div>
         <Card>
           <Card.Body>
-            <Card.Title>2. How Does React work? </Card.Title>
-            <Card.Text>
+            <Card.Title  className="p-2">2. How Does React work? </Card.Title>
+            <Card.Text  className="p-2">
               React uses a virtual DOM to efficiently render changes to the UI.
               When a component's state or props change, React creates a new
               virtual DOM tree, compares it with the previous tree, and
@@ -49,8 +50,8 @@ const Qustion = () => {
       <div>
         <Card>
           <Card.Body>
-            <Card.Title>3. How does useState work? </Card.Title>
-            <Card.Text>
+            <Card.Title  className="p-2">3. How does useState work? </Card.Title>
+            <Card.Text  className="p-2">
               useState is React Hook that allows you to add state to a
               functional component. It returns an array with two values: the
               current state and a function to update it. The Hook takes an
@@ -68,8 +69,8 @@ const Qustion = () => {
       <div>
         <Card>
           <Card.Body>
-            <Card.Title>4. Purpose of useEffect other than fetching data ? </Card.Title>
-            <Card.Text>
+            <Card.Title  className="p-2">4. Purpose of useEffect other than fetching data ? </Card.Title>
+            <Card.Text  className="p-2">
               The useEffect hook in React is used for performing side effects in
               function components. This includes not only fetching data, but
               also other actions such as setting up event listeners, updating
