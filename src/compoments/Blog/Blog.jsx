@@ -18,7 +18,7 @@ const Blog = (props) => {
               <img src={authorimage} alt="" />
             </div>
             <div className="ms-4">
-              <h5>{author}</h5>
+              <h5 className="author_name">{author}</h5>
               <p>{publishdate}</p>
             </div>
           </div>
@@ -29,17 +29,17 @@ const Blog = (props) => {
                 <i
                   role="button"
                   onClick={() => bookmarkBlog(props.blog)}
-                  className="fa-regular fa-bookmark"
+                  className="fa-solid fa-bookmark"
                 ></i>
               </h5>
             </div>
           </div>
         </div>
-        <Card.Title>{title}</Card.Title>
+        <Card.Title className="card_title">{title}</Card.Title>
         <Card.Text>
           <samp>#beginners </samp> <span> #programming</span>
         </Card.Text>
-        <span role="button" onClick={() => minCountBlog(props.blog)}>
+        <span className="mark_read" role="button" onClick={() => minCountBlog(props.blog)}>
           Mark as read
         </span>
       </Card.Body>

@@ -13,10 +13,10 @@ const Bookmarked = ({ booksmark, minBlog }) => {
   return (
     <div className="sidebar_list">
       <div className="sidebar-title">
-        <h5>Spent time on read : {min} min</h5>
+        <h5 className="sidebar_min">Spent time on read : {min} min</h5>
       </div>
-      <div className="my-3">
-        <h5>Bookmarked Blogs : {booksmark.length}</h5>
+      <div className="sidebar_blogs">
+        <h5 className="sidebar_blog">Bookmarked Blogs : {booksmark.length}</h5>
       </div>
       {booksmark.map((b) => (
         <div key={b.id} className="sidebar-list">

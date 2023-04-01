@@ -1,5 +1,19 @@
-.header_img{
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
+.nav_bar {
+  margin-right: 25px;
+}
+.nav_bar li a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  color: #111111;
+}
+.nav_bar li a:hover {
+  color: #6047ec;
+  background: rgba(17, 17, 17, 0.05);
+  border-radius: 5px;
+}
+.header_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }

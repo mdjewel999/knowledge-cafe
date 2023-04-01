@@ -6,9 +6,7 @@ import Bookmarked from "./compoments/Bookmarked/Bookmarked";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Qustion from "./compoments/Qustion/Qustion";
-
-
-
+import Responsive from "./compoments/Responsive/Responsive";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -67,7 +65,7 @@ function App() {
       return (
         <div className="container">
           <div className="row">
-            <div className="col-md-8">
+            <div className="col-md-8 order-md-1 order-1">
               {blogs.map((b) => (
                 <Blog
                   key={b.id}
@@ -78,7 +76,7 @@ function App() {
               ))}
             </div>
 
-            <div className="col-md-4">
+            <div className="col-md-4 order-md-2 order-2">
               <Bookmarked minBlog={minBlog} booksmark={booksmark} />
             </div>
           </div>
@@ -91,7 +89,7 @@ function App() {
     <div className="App">
       <Header></Header>
       {showAccordion()}
-
+      <Responsive></Responsive>
       <ToastContainer />
     </div>
   );

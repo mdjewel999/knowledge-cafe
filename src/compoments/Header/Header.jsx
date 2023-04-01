@@ -4,7 +4,7 @@ import cardImage from "../../assets/image/pexels-photo-614810.webp";
 
 const Header = () => {
   return (
-    <nav className="navbar navbar-expand-lg bg-light mb-5">
+    <nav className="navbar mx-auto navbar-expand-lg bg-light mb-5">
       <div className="container">
         <a className="navbar-brand" href="/">
           <b>knowledge-cafe</b>
@@ -20,8 +20,8 @@ const Header = () => {
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarText">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
+        <div className="collapse navbar-collapse justify-content-end" id="navbarText">
+          <ul className="navbar-nav nav_ mb-2 mb-lg-0 ">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
                 Home

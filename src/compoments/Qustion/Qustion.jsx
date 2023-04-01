@@ -57,8 +57,8 @@ const Qustion = () => {
               initial state value as an argument and returns an updated state
               value whenever the setter function is called. Every time your
               component renders, useState gives you an array containing two
-              values: The state variable (counter) with the value you stored.
-              The state setter function (setCounter) which can update the state
+              values: The state variable counter with the value you stored.
+              The state setter function setCounter which can update the state
               variable and trigger React to render the component again.
             </Card.Text>
           </Card.Body>
